@@ -11,6 +11,7 @@
 
     <modules>
         <module>irpc-core</module>
+        <module>irpc-interface</module>
     </modules>
 
     <properties>
