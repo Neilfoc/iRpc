@@ -6,7 +6,7 @@ import io.netty.handler.codec.MessageToByteEncoder;
 
 /**
  * @author 11105157
- * @Description 当数据发送之前，会通过这个模块
+ * @Description 编码器：当数据发送之前，会通过这个模块
  * @Date 2022/4/9
  */
 public class RpcEncoder extends MessageToByteEncoder<RpcProtocol> {

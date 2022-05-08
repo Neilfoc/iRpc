@@ -23,24 +23,25 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         //服务端接收数据的时候统一以RpcProtocol协议的格式接收，具体的发送逻辑见文章下方客户端发送部分
         RpcProtocol rpcProtocol = (RpcProtocol) msg;
         String json = new String(rpcProtocol.getContent(), 0, rpcProtocol.getContentLength());
-        RpcInvocation rpcInvocation = JSON.parseObject(json, RpcInvocation.class);
+        RpcInvocation reqRpcInvocation = JSON.parseObject(json, RpcInvocation.class);
         //这里的PROVIDER_CLASS_MAP就是一开始预先在启动时候存储的Bean集合
-        Object aimObject = CommonServerCache.PROVIDER_CLASS_MAP.get(rpcInvocation.getTargetServiceName());
+        Object aimObject = CommonServerCache.PROVIDER_CLASS_MAP.get(reqRpcInvocation.getTargetServiceName());
         Method[] methods = aimObject.getClass().getDeclaredMethods();
         Object result = null;
         for (Method method : methods) {
-            if (method.getName().equals(rpcInvocation.getTargetMethod())) {
+            if (method.getName().equals(reqRpcInvocation.getTargetMethod())) {
                 // 通过反射找到目标对象，然后执行目标方法并返回对应值
                 if (method.getReturnType().equals(Void.TYPE)) {
-                    method.invoke(aimObject, rpcInvocation.getArgs());
+                    method.invoke(aimObject, reqRpcInvocation.getArgs());
                 } else {
-                    result = method.invoke(aimObject, rpcInvocation.getArgs());
+                    result = method.invoke(aimObject, reqRpcInvocation.getArgs());
                 }
                 break;
             }
         }
-        rpcInvocation.setResponse(result);
-        RpcProtocol respRpcProtocol = new RpcProtocol(JSON.toJSONString(rpcInvocation).getBytes());
+        reqRpcInvocation.setResponse(result);
+        // 将执行的结果放到请求rpcInvocation中，最终包装成respRpcProtocol
+        RpcProtocol respRpcProtocol = new RpcProtocol(JSON.toJSONString(reqRpcInvocation).getBytes());
         ctx.writeAndFlush(respRpcProtocol);
     }
 

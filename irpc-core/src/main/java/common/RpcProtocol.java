@@ -8,7 +8,7 @@ import static common.constants.RpcConstants.MAGIC_NUMBER;
 
 /**
  * @author 11105157
- * @Description
+ * @Description 自定义协议
  * @Date 2022/4/9
  */
 @Data
@@ -22,7 +22,7 @@ public class RpcProtocol implements Serializable {
     // 当读取到的网络数据包中的contentLength字段已经超过预期值的话，就不会去读取content字段。
     private int contentLength;
 
-    // 核心的传输数据，这里核心的传输数据主要是请求的服务名称，请求服务的方法名称，请求参数内容。
+    // 核心的传输数据，这里核心的传输数据主要是【请求服务的名称，请求服务的方法名称，请求参数内容】。
     // 为了方便后期扩展，这些核心的请求数据统一封装到了RpcInvocation对象当中。
     private byte[] content;
 

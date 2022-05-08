@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cad785fc-698f-4257-91d6-9a43c97c7289" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/irpc-core/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcDecoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcEncoder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcInvocation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcProtocol.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/cache/CommonServerCache.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/config/ServerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/constants/RpcConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/server/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/irpc-core/src/main/java/server/ServerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcInvocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcInvocation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcProtocol.java" beforeDir="false" afterPath="$PROJECT_DIR$/irpc-core/src/main/java/common/RpcProtocol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/irpc-core/src/main/java/server/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/irpc-core/src/main/java/server/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/irpc-core/src/main/java/server/ServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/irpc-core/src/main/java/server/ServerHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +34,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -73,6 +71,12 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../irpc-framework" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -88,6 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649493613082</updated>
       <workItem from="1649493614632" duration="4730000" />
+      <workItem from="1652016506927" duration="2643000" />
     </task>
     <servers />
   </component>

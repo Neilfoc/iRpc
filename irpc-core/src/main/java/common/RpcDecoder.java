@@ -10,7 +10,7 @@ import static common.constants.RpcConstants.MAGIC_NUMBER;
 
 /**
  * @author 11105157
- * @Description 考虑是否会有粘包拆包的问题，而且还要设置请求数据包体积最大值
+ * @Description 解码器：考虑是否会有粘包拆包的问题，而且还要设置请求数据包体积最大值
  * @Date 2022/4/9
  */
 public class RpcDecoder extends ByteToMessageDecoder {
@@ -42,7 +42,7 @@ public class RpcDecoder extends ByteToMessageDecoder {
             }
             //这里对应了RpcProtocol对象的contentLength字段
             int length = byteBuf.readInt();
-            //说明剩余的数据包不是完整的，这里需要重置下读索引
+            //说明剩余的数据包不是完整的，这里需要重置读索引
             if (byteBuf.readableBytes() < length) {
                 byteBuf.readerIndex(beginReader);
                 return;

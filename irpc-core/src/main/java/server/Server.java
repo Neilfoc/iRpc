@@ -15,7 +15,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * @author 11105157
- * @Description
+ * @Description 结合Netty封装的接口来实现一个应用的启动部分
  * @Date 2022/4/9
  */
 public class Server {
